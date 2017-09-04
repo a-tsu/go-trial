@@ -2,10 +2,34 @@ package main
 
 import (
     "fmt"
-    "github.com/a-tsu/go-trial/calc"
+    "math"
 )
 
+func add(x, y int) int {
+    return x + y
+}
+
+func swap(x, y string) (string, string) {
+    return y, x
+}
+
+func split(sum int) (x, y int) {
+    x = sum * 4 / 9
+    y = sum - x
+    return
+}
+
 func main() {
-    fmt.Printf("Add(%v, %v) = %v\n", 1, 2, calc.Add(1, 2))
-    fmt.Printf("Hello, world\n")
+    fmt.Printf("Hello, 世界\n")
+
+    fmt.Println(math.Pi)
+
+    fmt.Println(add(42, 13))
+
+    a, b := swap("hello", "world")
+    fmt.Printf(b)
+    fmt.Printf(a)
+    fmt.Printf("\n")
+
+    fmt.Println(split(122))
 }
